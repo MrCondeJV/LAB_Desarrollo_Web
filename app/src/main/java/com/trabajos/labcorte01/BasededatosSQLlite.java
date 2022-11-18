@@ -25,7 +25,7 @@ public class BasededatosSQLlite extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(@NonNull SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLA_EVENTOS);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLA_EVENTOS);
         sqLiteDatabase.execSQL(TABLA_EVENTOS);
 
     }

@@ -65,13 +65,17 @@ public class MenuEventos extends AppCompatActivity {
 
             switch (item.getItemId()){
                 case R.id.addItem:
+                    Toast.makeText(MenuEventos.this, "AddItem", Toast.LENGTH_SHORT).show();
                     return true;
-                case R.id.editItem:Item:
+                case R.id.editItem:
+                    Toast.makeText(MenuEventos.this, "EditItem", Toast.LENGTH_SHORT).show();
                 return true;
-                case R.id.deleteItem:Item:
+                case R.id.deleteItem:
+                    Toast.makeText(MenuEventos.this, "DelItem", Toast.LENGTH_SHORT).show();
                 return true;
+                default:return super.onOptionsItemSelected(item);
             }
-            return super.onOptionsItemSelected(item);
+
 
     }
 
