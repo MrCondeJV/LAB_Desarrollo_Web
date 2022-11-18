@@ -1,16 +1,21 @@
 package com.trabajos.labcorte01;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MenuEventos extends AppCompatActivity {
 
     RecyclerView recycler_view;
     tableAdapter adapter;
@@ -22,6 +27,33 @@ public class MainActivity2 extends AppCompatActivity {
 
         recycler_view = findViewById(R.id.recycler_view);
         setRecyclerView();
+        //Boton Action Bar Para ir atras
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    //Metodos para la Barra de menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        MenuItem.OnActionExpandListener onActionExpandListener=new MenuItem.OnActionExpandListener() {
+            @Override
+            public boolean onMenuItemActionExpand(@NonNull MenuItem item) {
+                Toast.makeText(MenuEventos.this, "Search ha sido Expandido", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+
+            @Override
+            public boolean onMenuItemActionCollapse(@NonNull MenuItem item) {
+                Toast.makeText(MenuEventos.this, "Search ha sido Colapsado", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+
+        };
+        menu.findItem(R.id.search).setOnActionExpandListener(onActionExpandListener);
+        SearchView searchView=(SearchView) menu.findItem(R.id.search).getActionView();
+        searchView.setQueryHint("Buscar datos aqui...");
+        return true;
     }
 
     private void setRecyclerView() {
