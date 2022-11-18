@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuEventos"
+    android:background="@mipmap/bg"
+    android:stretchColumns="1,2,3,4,5,6"
+    android:layout_margin="0dp">
+
+    <TableRow android:layout_height="102dp">
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Fecha Inicio"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Causa"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Server"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Solucion"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Fecha Fin"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Indisponibilidad"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    </TableLayout>
+

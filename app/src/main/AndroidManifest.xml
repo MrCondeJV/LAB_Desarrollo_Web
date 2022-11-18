@@ -16,15 +16,19 @@
         <activity
             android:label="Menu Logs"
             android:name=".MenuLogs"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+
         <activity
             android:label="Menu de Seguridad"
             android:name=".MenuSeguridad"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:label="Menu de Eventos"
-            android:name=".MainActivity2"
-            android:exported="false" />
+            android:name=".MenuEventos"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

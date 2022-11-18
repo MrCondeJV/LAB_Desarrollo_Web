@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@mipmap/bg"
     tools:context=".MainActivity">
 
@@ -47,7 +48,9 @@
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46">
+        app:layout_constraintVertical_bias="0.46"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -69,6 +72,7 @@
                 android:fontFamily="@font/alatsi"
                 android:text="Menu Eventos"
                 android:textAlignment="center"
+                android:textColor="#C9000000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -86,7 +90,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46">
+        app:layout_constraintVertical_bias="0.46"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp">
 
 
         <LinearLayout
@@ -110,6 +116,7 @@
                 android:fontFamily="@font/alatsi"
                 android:text="Menu Seguridad"
                 android:textAlignment="center"
+                android:textColor="#C9000000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -128,7 +135,9 @@
         app:layout_constraintHorizontal_bias="0.879"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459">
+        app:layout_constraintVertical_bias="0.459"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp">
 
 
         <LinearLayout
@@ -153,6 +162,7 @@
                 android:text="Menu Logs"
                 android:textAlignment="center"
 
+                android:textColor="#C9000000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
