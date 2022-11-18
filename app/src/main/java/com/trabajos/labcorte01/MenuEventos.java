@@ -2,14 +2,21 @@ package com.trabajos.labcorte01;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.MenuView;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,16 +26,23 @@ public class MenuEventos extends AppCompatActivity {
 
     RecyclerView recycler_view;
     tableAdapter adapter;
+    ImageView item;
 
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_eventos);
 
+        setContentView(R.layout.activity_menu_eventos);
         recycler_view = findViewById(R.id.recycler_view);
+        item =(ImageView) findViewById(R.id.addItem);
         setRecyclerView();
+
         //Boton Action Bar Para ir atras
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
     }
 
     //Metodos para la Barra de menu
@@ -36,6 +50,9 @@ public class MenuEventos extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.menu,menu);
+
+
+
 
         MenuItem.OnActionExpandListener onActionExpandListener=new MenuItem.OnActionExpandListener() {
             @Override
@@ -50,34 +67,40 @@ public class MenuEventos extends AppCompatActivity {
                 return true;
             }
 
-        };
+
+        }; //Boton de busqueda
         menu.findItem(R.id.search).setOnActionExpandListener(onActionExpandListener);
         SearchView searchView=(SearchView) menu.findItem(R.id.search).getActionView();
         searchView.setQueryHint("Buscar datos aqui...");
         return true;
+
+
     }
     //Metodo para desplegar los items de CRUD
 
-
-
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+    public boolean onOptionsItemSelected(@NonNull MenuItem item ){
+          switch (item.getItemId()){
+              case R.id.addItem:
+                  Toast.makeText(this, "AddItem", Toast.LENGTH_SHORT).show();
 
-            switch (item.getItemId()){
-                case R.id.addItem:
-                    Toast.makeText(MenuEventos.this, "AddItem", Toast.LENGTH_SHORT).show();
-                    return true;
-                case R.id.editItem:
-                    Toast.makeText(MenuEventos.this, "EditItem", Toast.LENGTH_SHORT).show();
-                return true;
-                case R.id.deleteItem:
-                    Toast.makeText(MenuEventos.this, "DelItem", Toast.LENGTH_SHORT).show();
-                return true;
-                default:return super.onOptionsItemSelected(item);
-            }
+                  return true;
+              case R.id.editItem:
+                  Toast.makeText(this, "EditItem", Toast.LENGTH_SHORT).show();
+                  return true;
+              case R.id.deleteItem:
+                  Toast.makeText(this, "DelItem", Toast.LENGTH_SHORT).show();
+                  return true;
+              default: return super.onOptionsItemSelected(item);
+          }
 
 
     }
+
+
+
+
+
 
     private void setRecyclerView() {
         recycler_view.setHasFixedSize(true);
