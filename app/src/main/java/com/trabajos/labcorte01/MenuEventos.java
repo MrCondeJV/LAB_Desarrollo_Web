@@ -36,6 +36,7 @@ public class MenuEventos extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.menu,menu);
+
         MenuItem.OnActionExpandListener onActionExpandListener=new MenuItem.OnActionExpandListener() {
             @Override
             public boolean onMenuItemActionExpand(@NonNull MenuItem item) {
@@ -54,6 +55,24 @@ public class MenuEventos extends AppCompatActivity {
         SearchView searchView=(SearchView) menu.findItem(R.id.search).getActionView();
         searchView.setQueryHint("Buscar datos aqui...");
         return true;
+    }
+    //Metodo para desplegar los items de CRUD
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+
+            switch (item.getItemId()){
+                case R.id.addItem:
+                    return true;
+                case R.id.editItem:Item:
+                return true;
+                case R.id.deleteItem:Item:
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+
     }
 
     private void setRecyclerView() {

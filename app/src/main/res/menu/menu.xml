@@ -11,7 +11,7 @@
         app:showAsAction="ifRoom|collapseActionView" />
 
     <item
-        android:id="@+id/newItem"
+        android:id="@+id/addItem"
         android:icon="@drawable/ic_add"
         android:title="Add"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
