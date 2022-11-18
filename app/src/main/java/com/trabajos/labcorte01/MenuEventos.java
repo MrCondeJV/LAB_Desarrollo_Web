@@ -21,12 +21,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MenuEventos extends AppCompatActivity {
 
     RecyclerView recycler_view;
     tableAdapter adapter;
-    ImageView item;
+
 
 
     @SuppressLint("MissingInflatedId")
@@ -36,18 +37,18 @@ public class MenuEventos extends AppCompatActivity {
 
         setContentView(R.layout.activity_menu_eventos);
         recycler_view = findViewById(R.id.recycler_view);
-        item =(ImageView) findViewById(R.id.addItem);
+
         setRecyclerView();
 
         //Boton Action Bar Para ir atras
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
 
     }
 
     //Metodos para la Barra de menu
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(@NonNull Menu menu){
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.menu,menu);
 
@@ -83,7 +84,8 @@ public class MenuEventos extends AppCompatActivity {
           switch (item.getItemId()){
               case R.id.addItem:
                   Toast.makeText(this, "AddItem", Toast.LENGTH_SHORT).show();
-
+                   Intent intent = new Intent(MenuEventos.this, formulario_CRUD.class);
+                   startActivity(intent);
                   return true;
               case R.id.editItem:
                   Toast.makeText(this, "EditItem", Toast.LENGTH_SHORT).show();

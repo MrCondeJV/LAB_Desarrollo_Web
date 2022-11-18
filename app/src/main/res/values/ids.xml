@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textView" type="id" />
+    <item name="textView2" type="id" />
+    <item name="textView3" type="id" />
+    <item name="textView4" type="id" />
+    <item name="textView5" type="id" />
+    <item name="textView6" type="id" />
+    <item name="txt_crud_descripcion" type="id" />
+    <item name="txt_crud_causa" type="id" />
+    <item name="txt_crud_servicioA" type="id" />
+    <item name="txt_crud_indisponibilidad" type="id" />
+    <item name="editTextDate" type="id" />
+    <item name="editTextDate2" type="id" />
+    <item name="bnt_crud_guardar" type="id" />
+    <item name="btn_crud_cancelar" type="id" />
+</resources>

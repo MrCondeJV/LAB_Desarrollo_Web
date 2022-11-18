@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">LABCorte01</string>
+    <string name="causa">Causa</string>
+    <string name="servicio_afectado">Servicio Afectado</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="fecha_inicio">Fecha Inicio</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="indisponibilidad">Indisponibilidad</string>
+    <string name="fecha_fin">Fecha Fin</string>
 </resources>

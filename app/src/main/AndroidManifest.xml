@@ -14,20 +14,26 @@
         android:theme="@style/Theme.LABCorte01"
         tools:targetApi="31">
         <activity
-            android:label="Menu Logs"
+            android:name=".formulario_CRUD"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MenuLogs"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
-
+            android:label="Menu Logs"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:label="Menu de Seguridad"
             android:name=".MenuSeguridad"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:label="Menu de Seguridad"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:label="Menu de Eventos"
             android:name=".MenuEventos"
             android:exported="false"
+            android:label="Menu de Eventos"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
