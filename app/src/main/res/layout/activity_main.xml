@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@mipmap/bg"
     tools:context=".MainActivity">
 
@@ -47,7 +48,9 @@
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46">
+        app:layout_constraintVertical_bias="0.46"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -86,7 +89,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46">
+        app:layout_constraintVertical_bias="0.46"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp">
 
 
         <LinearLayout
@@ -128,7 +133,9 @@
         app:layout_constraintHorizontal_bias="0.879"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459">
+        app:layout_constraintVertical_bias="0.459"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp">
 
 
         <LinearLayout

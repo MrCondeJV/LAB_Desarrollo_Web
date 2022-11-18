@@ -35,9 +35,10 @@ public class tableAdapter_Logs extends RecyclerView.Adapter<tableAdapter_Logs.Vi
         if (lista != null && lista.size() > 0) {
             list_element3 element = lista.get(position);
             holder.nombreServerLog.setText(element.getNombreServerLog());
-            holder.fecha_hora.setText(element.getFechaHora());
+            holder.fecha.setText(element.getFecha());
             holder.usuario.setText(element.getUsuario());
             holder.estado_Sesion.setText(element.getEstadoSesion());
+            holder.hora.setText(element.getHora());
 
         } else {
             return;
@@ -51,15 +52,16 @@ public class tableAdapter_Logs extends RecyclerView.Adapter<tableAdapter_Logs.Vi
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView nombreServerLog, fecha_hora, usuario, estado_Sesion;
+        TextView nombreServerLog, fecha, usuario, estado_Sesion, hora;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            nombreServerLog = itemView.findViewById(R.id.nombreServerLog);
-            fecha_hora = itemView.findViewById(R.id.fecha_Hora);
-            usuario = itemView.findViewById(R.id.usuario);
-            estado_Sesion = itemView.findViewById(R.id.estado_Sesion);
+            nombreServerLog = itemView.findViewById(R.id.txtNameServerLogs);
+            fecha = itemView.findViewById(R.id.txtDateLogs);
+            usuario = itemView.findViewById(R.id.txtUserLogs);
+            estado_Sesion = itemView.findViewById(R.id.txtStateLogs);
+            hora = itemView.findViewById(R.id.txtTimeLogs);
         }
     }
 }

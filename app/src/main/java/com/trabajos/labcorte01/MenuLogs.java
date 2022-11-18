@@ -35,8 +35,12 @@ public class MenuLogs extends AppCompatActivity {
     private List<list_element3> getList(){
         List<list_element3> lista = new ArrayList<>();
 
-        lista.add(new list_element3("Server Lorica","05-08-2022  08:00 ","Admin","Fallida"));
-        lista.add(new list_element3("Server Monteria","05-08-2022  13:00 ","Admin","Exitosa"));
+        lista.add(new list_element3("Server Lorica","05-08-2022 ","Admin","Fallida","08:00"));
+        lista.add(new list_element3("Server Monteria","05-08-2022 ","Admin","Exitosa","13:00"));
+        lista.add(new list_element3("Server Lorica","05-08-2022 ","Admin","Fallida","08:00"));
+        lista.add(new list_element3("Server Monteria","05-08-2022 ","Admin","Exitosa","13:00"));
+        lista.add(new list_element3("Server Lorica","05-08-2022 ","Admin","Fallida","08:00"));
+        lista.add(new list_element3("Server Monteria","05-08-2022 ","Admin","Exitosa","13:00"));
 
         return lista;
 

@@ -18,7 +18,7 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_element);
+        setContentView(R.layout.activity_menu_eventos);
 
         recycler_view = findViewById(R.id.recycler_view);
         setRecyclerView();
