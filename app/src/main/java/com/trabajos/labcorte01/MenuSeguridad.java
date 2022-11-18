@@ -19,7 +19,7 @@ public class MenuSeguridad extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_seguridad);
         
-        recycler_view2 = findViewById(R.id.recycler_view2);
+        recycler_view2 = findViewById(R.id.listRecyclerView);
         setRecyclerView();
     }
 

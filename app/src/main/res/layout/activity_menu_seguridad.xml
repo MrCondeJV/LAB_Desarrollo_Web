@@ -1,51 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2"
     android:background="@mipmap/bg"
-    android:stretchColumns="1,2,3"
-    android:layout_margin="0dp">
-
-    <TableRow>
-
-        <TextView
-            android:text="Nombre Servidor"
-            android:layout_width="122dp"
-            android:layout_column="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:textColor="#ffff"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:text="Nombre Evento"
-            android:layout_width="96dp"
-            android:layout_column="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:textColor="#ffff"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:text="Descripcion"
-            android:layout_width="80dp"
-            android:layout_column="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:textColor="#ffff"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+    tools:context=".MainActivity">
 
 
-    </TableRow>
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view2"
-        android:layout_width="match_parent"
-        android:layout_height="369dp" />
-</TableLayout>
+        android:id="@+id/listRecyclerView"
+        android:layout_width="409dp"
+        android:layout_height="677dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

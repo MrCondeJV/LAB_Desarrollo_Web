@@ -52,9 +52,9 @@ public class tableAdapter_Seguridad extends RecyclerView.Adapter<tableAdapter_Se
 
       public ViewHolder(@NonNull View itemView){
           super(itemView);
-          NombreServer = itemView.findViewById(R.id.NombreServer);
-          NombreEvento = itemView.findViewById(R.id.NombreEvento);
-          Descripcion = itemView.findViewById(R.id.Descripcion);
+          NombreServer = itemView.findViewById(R.id.txtNameServer);
+          NombreEvento = itemView.findViewById(R.id.txtNameEvent);
+          Descripcion = itemView.findViewById(R.id.txtDescription);
       }
     }
 
