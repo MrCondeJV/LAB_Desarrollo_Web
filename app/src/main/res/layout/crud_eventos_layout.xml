@@ -67,46 +67,46 @@
 
     <TextView
         android:id="@+id/txt_crud_descripcion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="151dp"
+        android:layout_height="19dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="76dp"
         android:text="descripcion..."
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_crud_causa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="118dp"
+        android:layout_height="24dp"
         android:layout_marginTop="24dp"
         android:text="causa..."
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintHorizontal_bias="0.224"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/txt_crud_descripcion" />
 
     <TextView
         android:id="@+id/txt_crud_servicioA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_width="112dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="20dp"
         android:text="servicio..."
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/txt_crud_causa" />
 
     <TextView
         android:id="@+id/txt_crud_indisponibilidad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="108dp"
+        android:layout_height="23dp"
         android:layout_marginTop="68dp"
         android:text="indisp..."
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/txt_crud_servicioA" />
 
@@ -118,6 +118,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="date"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/txt_crud_descripcion"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
@@ -130,8 +131,31 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="date"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/txt_crud_indisponibilidad"
         app:layout_constraintTop_toBottomOf="@+id/txt_crud_servicioA"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="187dp" />
+
+        tools:layout_editor_absoluteX="187dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bnt_crud_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="128dp"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_crud_cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="120dp"
+        android:text="Cancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bnt_crud_guardar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

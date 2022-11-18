@@ -17,7 +17,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="92dp"
+            android:layout_height="100dp"
             android:orientation="horizontal"
             android:padding="6dp">
 
@@ -27,48 +27,53 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="2dp"
-                android:orientation="vertical"
                 android:layout_marginLeft="4dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginRight="4dp"
-                >
+
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txtNameServerLogs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/alatsi"
                     android:text="Nombre Server"
-                    android:textColor="@color/black"
+                    android:textColor="#DD000000"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/txtUserLogs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Usuario"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    />
+                    android:textColor="#DD000000"
+                    android:fontFamily="@font/alatsi"
+                    android:textSize="12sp" />
+
                 <TextView
                     android:id="@+id/txtDateLogs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fecha"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    />
+                    android:fontFamily="@font/alatsi"
+                    android:textColor="#DD000000"
+                    android:textSize="12sp" />
+
                 <TextView
                     android:id="@+id/txtTimeLogs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hora"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    />
+                    android:fontFamily="@font/alatsi"
+                    android:textColor="#DD000000"
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
+
             <TextView
                 android:id="@+id/txtStateLogs"
                 android:layout_width="wrap_content"
@@ -79,7 +84,8 @@
                 android:layout_marginEnd="6dp"
                 android:layout_marginRight="6dp"
                 android:text="Horas"
-                android:textColor="@color/black"
+                android:fontFamily="@font/alatsi"
+                android:textColor="#DD000000"
                 android:textSize="12sp" />
         </RelativeLayout>
     </LinearLayout>

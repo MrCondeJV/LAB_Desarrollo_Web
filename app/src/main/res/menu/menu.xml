@@ -7,7 +7,32 @@
         android:id="@+id/search"
         android:icon="@drawable/ic_search"
         android:title="Search"
-        app:showAsAction="ifRoom|collapseActionView"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/newItem"
+        android:icon="@drawable/ic_add"
+        android:title="Add"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="never|collapseActionView"
         />
+    <item
+        android:id="@+id/editItem"
+        android:icon="@drawable/ic_edit"
+        android:title="Edit"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="never|collapseActionView"
+        />
+    <item
+        android:id="@+id/deleteItem"
+        android:icon="@drawable/ic_delete"
+        android:title="Del"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="never|collapseActionView"
+        />
+
+
+
+
 </menu>
