@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:background="@mipmap/bg"
+    android:stretchColumns="1,2,3,4"
+    android:layout_margin="0dp">
+
+    <TableRow>
+
+        <TextView
+            android:text="Nombre Servidor"
+            android:layout_width="122dp"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:text="Fecha/Hora"
+            android:layout_width="96dp"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:text="Usuario"
+            android:layout_width="80dp"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:text="Estado Sesion"
+            android:layout_width="113dp"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+    </TableRow>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view3"
+        android:layout_width="match_parent"
+        android:layout_height="369dp" />
+</TableLayout>
