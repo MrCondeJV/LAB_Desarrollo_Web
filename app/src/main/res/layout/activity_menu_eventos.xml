@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menus.MenuEventos"
-    android:background="@mipmap/bg"
+    android:layout_margin="0dp"
+    android:background="@color/purple_500"
+    android:backgroundTint="#673AB7"
     android:stretchColumns="1,2,3,4,5,6"
-    android:layout_margin="0dp">
+    tools:context=".menus.MenuEventos">
 
     <TableRow android:layout_height="102dp">
 
@@ -17,7 +18,7 @@
             android:gravity="center"
             android:padding="2dp"
             android:text="Fecha Inicio"
-            android:textColor="#ffff"
+            android:textColor="#ffffffff"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -27,7 +28,7 @@
             android:gravity="center"
             android:padding="2dp"
             android:text="Causa"
-            android:textColor="#ffff"
+            android:textColor="#ffffffff"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -37,7 +38,7 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="Server"
-            android:textColor="#ffff"
+            android:textColor="#ffffffff"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -47,7 +48,7 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="Solucion"
-            android:textColor="#ffff"
+            android:textColor="#ffffffff"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -57,7 +58,7 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="Fecha Fin"
-            android:textColor="#ffff"
+            android:textColor="#ffffffff"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -67,7 +68,7 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="Indisponibilidad"
-            android:textColor="#ffff"
+            android:textColor="#ffffffff"
             android:textSize="20dp"
             android:textStyle="bold" />
     </TableRow>
@@ -75,6 +76,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    </TableLayout>
+        android:layout_height="match_parent"
+        android:background="#5EFFFFFF"
+        android:backgroundTint="#F6F5F5" />
+</TableLayout>
 

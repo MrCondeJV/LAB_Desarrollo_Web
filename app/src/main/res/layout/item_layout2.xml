@@ -13,12 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
-        android:background="#B9FFFFFF"
+        android:background="#8393729F"
         android:orientation="horizontal">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:background="#83ECECEC"
             android:orientation="horizontal"
             android:padding="6dp">
 
@@ -31,7 +32,7 @@
                 android:layout_marginLeft="4dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginRight="4dp"
-                android:background="#B9FFFFFF"
+                android:background="#83E0D9E3"
                 android:orientation="vertical">
 
                 <TextView
@@ -49,8 +50,8 @@
                     android:id="@+id/txtNameEvent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nombre Evento"
                     android:fontFamily="@font/alatsi"
+                    android:text="Nombre Evento"
                     android:textColor="#DD000000"
                     android:textSize="12sp" />
 
@@ -58,8 +59,8 @@
                     android:id="@+id/txtDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Descripcion del Evento"
                     android:fontFamily="@font/alatsi"
+                    android:text="Descripcion del Evento"
                     android:textColor="#DD000000"
                     android:textSize="12sp" />
 

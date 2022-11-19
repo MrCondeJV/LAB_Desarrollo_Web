@@ -18,6 +18,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:background="#83E0D9E3"
             android:orientation="horizontal"
             android:padding="6dp">
 
@@ -31,6 +32,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginRight="4dp"
 
+                android:background="#83E0D9E3"
                 android:orientation="vertical">
 
                 <TextView
@@ -48,17 +50,17 @@
                     android:id="@+id/txtUserLogs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/alatsi"
                     android:text="Usuario"
                     android:textColor="#DD000000"
-                    android:fontFamily="@font/alatsi"
                     android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/txtDateLogs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fecha"
                     android:fontFamily="@font/alatsi"
+                    android:text="Fecha"
                     android:textColor="#DD000000"
                     android:textSize="12sp" />
 
@@ -66,8 +68,8 @@
                     android:id="@+id/txtTimeLogs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hora"
                     android:fontFamily="@font/alatsi"
+                    android:text="Hora"
                     android:textColor="#DD000000"
                     android:textSize="12sp" />
 
@@ -83,8 +85,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="6dp"
                 android:layout_marginRight="6dp"
-                android:text="Horas"
                 android:fontFamily="@font/alatsi"
+                android:text="Horas"
                 android:textColor="#DD000000"
                 android:textSize="12sp" />
         </RelativeLayout>
