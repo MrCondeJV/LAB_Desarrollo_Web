@@ -1,23 +1,29 @@
-package com.trabajos.labcorte01;
+package com.trabajos.labcorte01.menus;
+
+import static com.trabajos.labcorte01.db.BasededatosSQLlite.TABLE_EVENTOS;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuView;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.content.ClipData;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.Toast;
+
+import com.trabajos.labcorte01.R;
+import com.trabajos.labcorte01.db.BasededatosSQLlite;
+import com.trabajos.labcorte01.formulario_CRUD;
+import com.trabajos.labcorte01.list_elements.list_element1;
+import com.trabajos.labcorte01.List_eventos;
+import com.trabajos.labcorte01.tables_adapters.tableAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -111,43 +117,32 @@ public class MenuEventos extends AppCompatActivity {
         recycler_view.setAdapter(adapter);
     }
 
-    private List<list_element1> getList(){
-        List<list_element1> lista = new ArrayList<>();
+    private List<List_eventos> getList(){
 
-        lista.add(new list_element1("25-07-2022","Averiado","Server Lorica","Reinicio","05-08-2022","4:25"));
-        lista.add(new list_element1("25-07-2022","Averiado 1","Server Lorica","Reinicio","05-08-2022","4:25"));
-        lista.add(new list_element1("25-07-2022","Averiado 2","Server Lorica","Reinicio","05-08-2022","4:25"));
-        return lista;
+        BasededatosSQLlite basededatosSQLlite = new BasededatosSQLlite(MenuEventos.this);
+        SQLiteDatabase db = basededatosSQLlite.getWritableDatabase();
 
+        List<List_eventos> lista_eventos = new ArrayList<>();
+        List_eventos eventos = null;
+        Cursor cursorEventos = null;
+
+        cursorEventos = db.rawQuery("SELECT * FROM "+ TABLE_EVENTOS, null);
+        if(cursorEventos.moveToFirst()){
+            do{
+                eventos = new List_eventos();
+                eventos.setId(cursorEventos.getInt(0));
+                eventos.setFecha_inicio(cursorEventos.getString(1));
+                eventos.setDescripcion(cursorEventos.getString(2));
+                eventos.setCausa(cursorEventos.getString(3));
+                eventos.setServicioA(cursorEventos.getString(4));
+                eventos.setFecha_fin(cursorEventos.getString(5));
+                eventos.setIndisponibilidad(cursorEventos.getString(6));
+                lista_eventos.add(eventos);
+
+            }while (cursorEventos.moveToNext());
+        }
+        cursorEventos.close();
+         return lista_eventos;
     }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Toast.makeText(this, "OnStart maEvents", Toast.LENGTH_SHORT).show();
-        // La actividad est� a punto de hacerse visible.
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(this, "OnResume maEvents", Toast.LENGTH_SHORT).show();
-        // La actividad se ha vuelto visible (ahora se "reanuda").
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Toast.makeText(this, "OnPause maEvents", Toast.LENGTH_SHORT).show();
-        // Enfocarse en otra actividad  (esta actividad est� a punto de ser "detenida").
-    }
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Toast.makeText(this, "OnStop maEvents", Toast.LENGTH_SHORT).show();
-        // La actividad ya no es visible (ahora est� "detenida")
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Toast.makeText(this, "OnDestroy maEvents", Toast.LENGTH_SHORT).show();
-        // La actividad est� a punto de ser destruida.
-    }
+
 }

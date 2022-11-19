@@ -1,4 +1,4 @@
-package com.trabajos.labcorte01;
+package com.trabajos.labcorte01.menus;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.trabajos.labcorte01.R;
+import com.trabajos.labcorte01.list_elements.list_element2;
+import com.trabajos.labcorte01.tables_adapters.tableAdapter_Seguridad;
 
 import java.util.ArrayList;
 import java.util.List;

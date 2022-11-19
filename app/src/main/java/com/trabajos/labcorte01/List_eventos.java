@@ -1,23 +1,23 @@
 package com.trabajos.labcorte01;
 
-public class CRUD_eventos {
+public class List_eventos {
 
 
+    private int id;
     String fecha_inicio;
+    String descripcion;
     String causa;
-    String server;
-    String solucion;
+    String servicioA;
     String fecha_fin;
     String indisponibilidad;
 
-    public CRUD_eventos( String fecha_inicio, String causa, String server, String solucion, String fecha_fin, String indisponibilidad) {
 
-        this.fecha_inicio = fecha_inicio;
-        this.causa = causa;
-        this.server = server;
-        this.solucion = solucion;
-        this.fecha_fin = fecha_fin;
-        this.indisponibilidad = indisponibilidad;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFecha_inicio() {
@@ -36,20 +36,20 @@ public class CRUD_eventos {
         this.causa = causa;
     }
 
-    public String getServer() {
-        return server;
+    public String getServicioA() {
+        return servicioA;
     }
 
-    public void setServer(String server) {
-        this.server = server;
+    public void setServicioA(String server) {
+        this.servicioA = server;
     }
 
-    public String getSolucion() {
-        return solucion;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setSolucion(String solucion) {
-        this.solucion = solucion;
+    public void setDescripcion(String solucion) {
+        this.descripcion = solucion;
     }
 
     public String getFecha_fin() {

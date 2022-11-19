@@ -1,4 +1,4 @@
-package com.trabajos.labcorte01;
+package com.trabajos.labcorte01.tables_adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,14 +9,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.trabajos.labcorte01.List_eventos;
+import com.trabajos.labcorte01.R;
+import com.trabajos.labcorte01.list_elements.list_element1;
+
 import java.util.List;
 
 public class tableAdapter extends RecyclerView.Adapter<tableAdapter.ViewHolder> {
     Context context;
-    List<list_element1> lista;
+    List<List_eventos> lista;
 
 
-  public tableAdapter(Context context, List<list_element1> table_list){
+  public tableAdapter(Context context, List<List_eventos> table_list){
 
       this.context = context;
       this.lista = table_list;
@@ -31,11 +35,11 @@ public class tableAdapter extends RecyclerView.Adapter<tableAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder,int position) {
         if(lista != null && lista.size()>0){
-            list_element1 element = lista.get(position);
+            List_eventos element = lista.get(position);
             holder.fecha_inicio.setText(element.getFecha_inicio());
             holder.causa.setText(element.getCausa());
-            holder.server.setText(element.getServer());
-            holder.solucion.setText(element.getSolucion());
+            holder.server.setText(element.getServicioA());
+            holder.solucion.setText(element.getDescripcion());
             holder.fecha_fin.setText(element.getFecha_fin());
             holder.indisponibilidad.setText(element.getIndisponibilidad());
 

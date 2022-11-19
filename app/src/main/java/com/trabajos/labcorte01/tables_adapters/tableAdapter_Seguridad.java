@@ -1,4 +1,4 @@
-package com.trabajos.labcorte01;
+package com.trabajos.labcorte01.tables_adapters;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.trabajos.labcorte01.R;
+import com.trabajos.labcorte01.list_elements.list_element2;
 
 import java.util.List;
 

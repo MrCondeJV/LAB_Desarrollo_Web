@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.trabajos.labcorte01.menus.MenuEventos;
+import com.trabajos.labcorte01.menus.MenuLogs;
+import com.trabajos.labcorte01.menus.MenuSeguridad;
+
 public class MainActivity extends AppCompatActivity {
 
     private ImageView img_eventos;
