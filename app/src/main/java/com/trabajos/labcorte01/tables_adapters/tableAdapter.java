@@ -1,6 +1,7 @@
 package com.trabajos.labcorte01.tables_adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,9 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.trabajos.labcorte01.List_eventos;
+import com.trabajos.labcorte01.list_elements.List_eventos;
 import com.trabajos.labcorte01.R;
-import com.trabajos.labcorte01.list_elements.list_element1;
+import com.trabajos.labcorte01.cruds.Ver_Activity;
 
 import java.util.List;
 
@@ -65,6 +66,16 @@ public class tableAdapter extends RecyclerView.Adapter<tableAdapter.ViewHolder> 
           solucion = itemView.findViewById(R.id.solucion);
           fecha_fin = itemView.findViewById(R.id.fecha_fin);
           indisponibilidad = itemView.findViewById(R.id.indisponibilidad);
+
+           itemView.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View view) {
+                   Context context = view.getContext();
+                   Intent intent = new Intent(context, Ver_Activity.class);
+                   intent.putExtra("ID", lista.get(getAdapterPosition()).getId());
+                   context.startActivity(intent);
+               }
+           });
       }
     }
 

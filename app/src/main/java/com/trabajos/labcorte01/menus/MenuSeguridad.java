@@ -36,7 +36,7 @@ public class MenuSeguridad extends AppCompatActivity {
     }
 
     //Metodos para la Barra de menu
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.menu,menu);
@@ -58,7 +58,9 @@ public class MenuSeguridad extends AppCompatActivity {
         SearchView searchView=(SearchView) menu.findItem(R.id.search).getActionView();
         searchView.setQueryHint("Buscar datos aqui...");
         return true;
-    }
+    }*/
+
+
     private void setRecyclerView() {
         recycler_view2.setHasFixedSize(true);
         recycler_view2.setLayoutManager(new LinearLayoutManager(this));
@@ -72,7 +74,8 @@ public class MenuSeguridad extends AppCompatActivity {
         lista.add(new list_element2("Server Planeta R","Reparacion","Mantenimiento del server"));
         return lista;
     }
-    @Override
+    //ASINC TASK
+    /*@Override
     protected void onStart() {
         super.onStart();
         Toast.makeText(this, "OnStart ma3", Toast.LENGTH_SHORT).show();
@@ -101,6 +104,6 @@ public class MenuSeguridad extends AppCompatActivity {
         super.onDestroy();
         Toast.makeText(this, "OnDestroy ma3", Toast.LENGTH_SHORT).show();
         // La actividad est� a punto de ser destruida.
-    }
+    }*/
 
 }

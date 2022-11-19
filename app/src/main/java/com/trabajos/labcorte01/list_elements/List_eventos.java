@@ -1,4 +1,4 @@
-package com.trabajos.labcorte01;
+package com.trabajos.labcorte01.list_elements;
 
 public class List_eventos {
 

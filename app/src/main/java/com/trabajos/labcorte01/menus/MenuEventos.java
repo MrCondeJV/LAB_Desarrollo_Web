@@ -20,9 +20,8 @@ import android.widget.Toast;
 
 import com.trabajos.labcorte01.R;
 import com.trabajos.labcorte01.db.BasededatosSQLlite;
-import com.trabajos.labcorte01.formulario_CRUD;
-import com.trabajos.labcorte01.list_elements.list_element1;
-import com.trabajos.labcorte01.List_eventos;
+import com.trabajos.labcorte01.cruds.formulario_CRUD;
+import com.trabajos.labcorte01.list_elements.List_eventos;
 import com.trabajos.labcorte01.tables_adapters.tableAdapter;
 
 import java.util.ArrayList;
@@ -93,12 +92,7 @@ public class MenuEventos extends AppCompatActivity {
                    Intent intent = new Intent(MenuEventos.this, formulario_CRUD.class);
                    startActivity(intent);
                   return true;
-              case R.id.editItem:
-                  Toast.makeText(this, "EditItem", Toast.LENGTH_SHORT).show();
-                  return true;
-              case R.id.deleteItem:
-                  Toast.makeText(this, "DelItem", Toast.LENGTH_SHORT).show();
-                  return true;
+
               default: return super.onOptionsItemSelected(item);
           }
 

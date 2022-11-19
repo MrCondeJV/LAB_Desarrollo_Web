@@ -1,4 +1,4 @@
-package com.trabajos.labcorte01;
+package com.trabajos.labcorte01.cruds;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,9 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.trabajos.labcorte01.R;
 import com.trabajos.labcorte01.db.BasededatosSQLlite;
 import com.trabajos.labcorte01.db.DbEventos;
-import com.trabajos.labcorte01.menus.MenuEventos;
 import com.trabajos.labcorte01.tables_adapters.tableAdapter;
 
 import java.util.Objects;
@@ -29,6 +29,9 @@ public class formulario_CRUD extends AppCompatActivity {
         guardar = findViewById(R.id.bnt_crud_guardar);
         cancelar = findViewById(R.id.btn_crud_cancelar);
         creardb = findViewById(R.id.bnt_crud_crearDB);
+
+        creardb.setVisibility(View.INVISIBLE);
+
 
         //Boton Action Bar Para ir atras
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);

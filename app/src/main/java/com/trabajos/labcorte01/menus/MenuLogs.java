@@ -38,7 +38,7 @@ public class MenuLogs extends AppCompatActivity {
     }
 
     //Metodos para la Barra de menu
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.menu,menu);
@@ -60,7 +60,9 @@ public class MenuLogs extends AppCompatActivity {
         SearchView searchView=(SearchView) menu.findItem(R.id.search).getActionView();
         searchView.setQueryHint("Buscar datos aqui...");
         return true;
-    }
+    }*/
+
+
     private void setRecyclerView() {
         recycler_view3.setHasFixedSize(true);
         recycler_view3.setLayoutManager(new LinearLayoutManager(this));
@@ -80,7 +82,9 @@ public class MenuLogs extends AppCompatActivity {
 
         return lista;
 
-    }@Override
+    }
+
+    /*@Override
     protected void onStart() {
         super.onStart();
         Toast.makeText(this, "OnStart maLogs", Toast.LENGTH_SHORT).show();
@@ -109,5 +113,5 @@ public class MenuLogs extends AppCompatActivity {
         super.onDestroy();
         Toast.makeText(this, "OnDestroy maLogs", Toast.LENGTH_SHORT).show();
         // La actividad est� a punto de ser destruida.
-    }
+    }*/
 }

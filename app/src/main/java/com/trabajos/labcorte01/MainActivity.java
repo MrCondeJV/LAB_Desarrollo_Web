@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
+    //ASINC TASK
+   /* @Override
     protected void onStart() {
         super.onStart();
         Toast.makeText(this, "OnStart maMain", Toast.LENGTH_SHORT).show();
@@ -83,5 +84,5 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "OnDestroy maMain", Toast.LENGTH_SHORT).show();
         // La actividad est� a punto de ser destruida.
     }
-
+*/
     }

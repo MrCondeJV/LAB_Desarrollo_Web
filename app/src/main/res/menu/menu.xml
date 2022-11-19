@@ -15,16 +15,7 @@
         android:icon="@drawable/ic_add"
         android:title="Add"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/editItem"
-        android:icon="@drawable/ic_edit"
-        android:title="Edit"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/deleteItem"
-        android:icon="@drawable/ic_delete"
-        android:title="Del"
-        app:showAsAction="never" />
+
 
 
 </menu>
